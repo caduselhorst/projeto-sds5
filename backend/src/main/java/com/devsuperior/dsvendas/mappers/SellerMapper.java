@@ -1,4 +1,4 @@
-package com.devsuperior.dsvendas;
+package com.devsuperior.dsvendas.mappers;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.devsuperior.dsvendas.SellerMapper;
 import com.devsuperior.dsvendas.dto.SellerDTO;
+import com.devsuperior.dsvendas.mappers.SellerMapper;
 import com.devsuperior.dsvendas.repositories.SellerRepository;
 
 import lombok.AllArgsConstructor;
