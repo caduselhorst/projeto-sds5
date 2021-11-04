@@ -1,18 +1,40 @@
 package com.devsuperior.dsvendas.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.devsuperior.dsvendas.entities.Seller;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class SalesSuccessDTO {
 	
 	private String sellerName;
 	private Long visited;
 	private Long deals;
+	
+	public SalesSuccessDTO() {}
+	
+	public SalesSuccessDTO(Seller seller, Long visited, Long deals) {
+		this.sellerName = seller.getName();
+		this.visited = visited;
+		this.deals = deals;
+	}
+	public String getSellerName() {
+		return sellerName;
+	}
+	public void setSellerName(String sellerName) {
+		this.sellerName = sellerName;
+	}
+	public Long getVisited() {
+		return visited;
+	}
+	public void setVisited(Long visited) {
+		this.visited = visited;
+	}
+	public Long getDeals() {
+		return deals;
+	}
+	public void setDeals(Long deals) {
+		this.deals = deals;
+	}
+	
+	
 
 }

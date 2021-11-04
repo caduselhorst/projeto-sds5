@@ -12,13 +12,13 @@ import com.devsuperior.dsvendas.entities.Sale;
 public interface SaleRepository extends JpaRepository<Sale, Long> {
 
 	@Query("select "
-			+ "new com.devsuperior.dsvendas.dto.SaleSumDTO(obj.seller.name, SUM(obj.amount) ) "
+			+ "new com.devsuperior.dsvendas.dto.SaleSumDTO(obj.seller, SUM(obj.amount) ) "
 			+ "from Sale AS obj "
 			+ "group by obj.seller")
 	public List<SaleSumDTO> ammoutGroupedBySeller();
 	
 	@Query("select "
-			+ "new com.devsuperior.dsvendas.dto.SalesSuccessDTO(obj.seller.name, SUM(obj.visited), sum(obj.deals) ) "
+			+ "new com.devsuperior.dsvendas.dto.SalesSuccessDTO(obj.seller, SUM(obj.visited), sum(obj.deals) ) "
 			+ "from Sale AS obj "
 			+ "group by obj.seller")
 	public List<SalesSuccessDTO> succesGroupedBySeller();
