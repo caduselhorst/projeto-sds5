@@ -1,5 +1,6 @@
 package com.devsuperior.dsvendas.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
@@ -12,7 +13,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class SaleDTO {
+public class SaleDTO implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2696449748893397814L;
 	
 	private Long id;
 	private Integer visited;
