@@ -18,14 +18,12 @@ const DataTable = () => {
     const [activePage, setActivePage] = useState(0);
 
     const changePage = (index: number) => {
-        console.log("Index:", index)
         setActivePage(index);
     }
 
     useEffect(() => {
         axios.get(`${BASE_URL}/sales?page=${activePage}&size=10&sort=date,desc`)
             .then(response => {
-                console.log(response.data)
                 setPage(response.data);
             })
             .catch(error => {
